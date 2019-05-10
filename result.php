@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Result</title>
-	<link rel="stylesheet" href=".../bootstrap.css">
+	<link rel="stylesheet" href="bootstrap.css">
 </head>
-<body>
+<body class="ml-3">
 	 <p>
 	 	<h2>Hi there!</h2>
 	 	<h3>Here is the information you gave us.</h3>

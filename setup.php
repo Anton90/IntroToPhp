@@ -3,46 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Setup</title>
-	<link rel="stylesheet" href=".../bootstrap.css">
+	<link rel="stylesheet" href="bootstrap.css">
 </head>
-<body>
+<body class="ml-3">
 	<form action="result.php" method="post">
 		<h2>5 Favorite movies</h2>
-		<ul>
-			<li> <input type="text" name="favMovie1">1</li>
-			<li> <input type="text" name="favMovie2">2</li>
-			<li> <input type="text" name="favMovie3">3</li>
-			<li> <input type="text" name="favMovie4">4</li>
-			<li> <input type="text" name="favMovie5">5</li>
-		</ul>
+		<ol>
+			<li> <input type="text" name="favMovie1"></li>
+			<li> <input type="text" name="favMovie2"></li>
+			<li> <input type="text" name="favMovie3"></li>
+			<li> <input type="text" name="favMovie4"></li>
+			<li> <input type="text" name="favMovie5"></li>
+		</ol><br>
+
 		<h2>5 Favorite tv shows</h2>
-		<ul>
-			<li> <input type="text" name="favTvShow1">1</li>
-			<li> <input type="text" name="favTvShow2">2</li>
-			<li> <input type="text" name="favTvShow3">3</li>
-			<li> <input type="text" name="favTvShow4">4</li>
-			<li> <input type="text" name="favTvShow5">5</li>
-		</ul>
+		<ol>
+			<li> <input type="text" name="favTvShow1"></li>
+			<li> <input type="text" name="favTvShow2"></li>
+			<li> <input type="text" name="favTvShow3"></li>
+			<li> <input type="text" name="favTvShow4"></li>
+			<li> <input type="text" name="favTvShow5"></li>
+		</ol>
 		<input type="submit">
-	</form>
+	</form><br>
 
 		<form action="result.php" method="get">
 		<h2>5 Worst movies</h2>
-		<ul>
-			<li> <input type="text" name="badMovie1">1</li>
-			<li> <input type="text" name="badMovie2">2</li>
-			<li> <input type="text" name="badMovie3">3</li>
-			<li> <input type="text" name="badMovie4">4</li>
-			<li> <input type="text" name="badMovie5">5</li>
-		</ul>
+		<ol>
+			<li> <input type="text" name="badMovie1"></li>
+			<li> <input type="text" name="badMovie2"></li>
+			<li> <input type="text" name="badMovie3"></li>
+			<li> <input type="text" name="badMovie4"></li>
+			<li> <input type="text" name="badMovie5"></li>
+		</ol><br>
+
 		<h2>5 Favorite countries</h2>
-		<ul>
-			<li> <input type="text" name="favCountry1">1</li>
-			<li> <input type="text" name="favCountry2">2</li>
-			<li> <input type="text" name="favCountry3">3</li>
-			<li> <input type="text" name="favCountry4">4</li>
-			<li> <input type="text" name="favCountry5">5</li>
-		</ul>
+		<ol>
+			<li> <input type="text" name="favCountry1"></li>
+			<li> <input type="text" name="favCountry2"></li>
+			<li> <input type="text" name="favCountry3"></li>
+			<li> <input type="text" name="favCountry4"></li>
+			<li> <input type="text" name="favCountry5"></li>
+		</ol>
 		<input type="submit">
 	</form>
 </body>
