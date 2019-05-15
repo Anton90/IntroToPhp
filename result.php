@@ -9,6 +9,14 @@
 	 <p>
 	 	<h2>Hi there!</h2>
 	 	<h3>Here is the information you gave us.</h3>
+	 	<ul class="nav nav-tabs">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="#">Post</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Get</a>
+		  </li>
+		</ul>
 	 	<h4>5 Favorite movies</h4>
 	 		<ol>
 	 			<li><?php echo $_POST["favMovie1"]; ?></li>
