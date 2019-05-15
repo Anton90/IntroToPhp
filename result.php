@@ -14,9 +14,10 @@
 		    <a class="nav-link <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){echo 'active';} ?>" href="#">Post</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link <?php if ($_SERVER['REQUEST_METHOD'] == 'GET'){echo 'active';} ?>"" href="#">Get</a>
+		    <a class="nav-link <?php if ($_SERVER['REQUEST_METHOD'] == 'GET'){echo 'active';} ?>" href="#">Get</a>
 		  </li>
 		</ul>
+		<div class="<?php if ($_SERVER['REQUEST_METHOD'] == 'GET'){echo 'd-none';} ?>">
 	 	<h4>5 Favorite movies</h4>
 	 		<ol>
 	 			<li><?php echo $_POST["favMovie1"]; ?></li>
@@ -34,7 +35,8 @@
 	 			<li><?php echo $_POST["favTvShow4"]; ?></li>
 	 			<li><?php echo $_POST["favTvShow5"]; ?></li>
 	 		</ol>
-
+	 	</div>
+		<div class="<?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){echo 'd-none';} ?>">
 	 	<h4>5 Worst movies</h4>
 	 		 <ol>
 	 			<li><?php echo $_GET["badMovie1"]; ?></li>
@@ -52,6 +54,7 @@
 	 			<li><?php echo $_GET["favCountry4"]; ?></li>
 	 			<li><?php echo $_GET["favCountry5"]; ?></li>
 	 		</ol>
+	 	</div>
 
 
 	 </p>
