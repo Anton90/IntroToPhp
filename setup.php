@@ -30,7 +30,7 @@
 			<li> <input type="text" name="favTvShow5"></li>
 		</ol>
 		</div>
-		<input type="submit">
+		<input id= "submitPost" type="submit">
 		
 	</div>
 	</form><br>
@@ -60,7 +60,7 @@
 			<li> <input type="text" name="favCountry5"></li>
 		</ol>
 		</div>
-		<input type="submit">
+		<input id="submitGet" type="submit">
 		
 	</div>
 	</form>

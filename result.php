@@ -11,10 +11,10 @@
 	 	<h3>Here is the information you gave us.</h3>
 	 	<ul class="nav nav-tabs">
 		  <li class="nav-item">
-		    <a class="nav-link active" href="#">Post</a>
+		    <a class="nav-link <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){echo 'active';} ?>" href="#">Post</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#">Get</a>
+		    <a class="nav-link <?php if ($_SERVER['REQUEST_METHOD'] == 'GET'){echo 'active';} ?>"" href="#">Get</a>
 		  </li>
 		</ul>
 	 	<h4>5 Favorite movies</h4>
