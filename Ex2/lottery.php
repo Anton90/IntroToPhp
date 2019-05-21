@@ -24,9 +24,7 @@
 		for ($i=0; $i < count($output); $i++) 
 		{
 			$random = "lottery" . $i; 
-			echo ' <input type="radio" class="form-check-input" name="lotteryOption" value=';
-			echo $i;
-			echo ">";
+			echo " <input type='radio' class='form-check-input' name='lotteryOption' value='$i'>";
 			echo $output[$i];
 		}
 		?>

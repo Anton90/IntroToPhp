@@ -15,12 +15,11 @@
 		];
 
 		$winner = rand(0,4);
+		$choice = $_POST["lotteryOption"];
 
-	echo "This is your choice:";
-	echo $output[$_POST["lotteryOption"]]; 
+	echo "This is your choice: $output[$choice]";
 	echo "<br>"; 
-	echo "Winning icon: ";
-	echo $output[$winner];
+	echo "Winning icon: $output[$winner]";
 	echo "<br>";  
 
 	if ($_POST["lotteryOption"] == $winner) {
