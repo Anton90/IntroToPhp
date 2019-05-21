@@ -36,9 +36,6 @@
 		}	
 	}
 
-	
-
-
 	function addGradient($string) {
 		$colorRandom = rand(0,360);  
 	
@@ -47,9 +44,6 @@
 			echo  "<span style='color: hsl($color, 100%, 50%);'>" . $string[$i] . "</span>"; 
 		}
 	}
-
-
-	 
 
 	echo $nickname;
 	echo '<br>'; 
@@ -72,10 +66,6 @@
 	echo randomUppercase($nickname); 
 	echo '<br>';
 	echo addGradient($nickname); 
-
-
-	
-
 	echo '<br>';
 	echo "<br><a href='nickname.php'>Back</a>";
 	 ?>
