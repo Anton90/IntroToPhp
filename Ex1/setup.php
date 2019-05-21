@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Setup</title>
-	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="../bootstrap.css">
 </head>
 <body class="ml-3 container">
 	

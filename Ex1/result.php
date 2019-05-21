@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Result</title>
-	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="../bootstrap.css">
 </head>
 <body class="ml-3">
 	 <p>
@@ -55,8 +55,20 @@
 	 			<li><?php echo $_GET["favCountry5"]; ?></li>
 	 		</ol>
 	 	</div>
-
-
 	 </p>
+
+	 <table>
+	 	<tr>
+	 		<th>Favorite Movie</th>
+	 	</tr>
+		<?php 
+		for (
+
+
+		}
+
+		 ?>
+	 </table>
+
 </body>
 </html>
