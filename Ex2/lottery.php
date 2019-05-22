@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +12,14 @@
 <body>
 <?php 
 	$output = [
-		"\u{1F355}",
-		"\u{1F35f}",
-		"\u{1F354}",
-		"\u{1F352}",
-		"\u{1F353}",
-	];
+			"\u{1F355}",
+			"\u{1F35f}",
+			"\u{1F354}",
+			"\u{1F352}",
+			"\u{1F353}",
+		];
+
+		$_SESSION['lotteryArray'] = $output; 
 ?>
 <h3>Choose one of these options for a chance to win awesome prizes!!!</h3>
 <div class="container">
