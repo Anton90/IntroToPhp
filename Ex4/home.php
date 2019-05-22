@@ -98,9 +98,14 @@ setcookie("cookieCar");
 	echo "<br>"; 
 	
 	$_COOKIE["cookieCar"] = serialize($carsSpec); 
+	//$_SESSION['sessionCar']= serialize($carsSpec);
 
 	echo $_COOKIE["cookieCar"]; 
+	//echo $_SESSION['sessionCar'];
+
+	
 
 ?>
+<a href="../Ex5/home.php">Link</a>
 </body>
 </html>

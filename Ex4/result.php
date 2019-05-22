@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Nickname Result</title>
-</head>
-<body>
-	<?php 
+<?php 
+session_start();
+
 	$nickname = $_POST['nickname'];
 
 	function randomString($length = 4) {
@@ -22,52 +17,88 @@
 	}
 
 	function randomUppercase($string) {
-
+		$newString = '';
 		for ($i = 0; $i < strlen($string); $i++) {
 			if (ctype_lower($string[$i])) {
 				if (rand(1,2) == 1) {
-					echo strtoupper($string[$i]); 
+					$newString .= strtoupper($string[$i]); 
 				} else {
-					echo $string[$i]; 
+					$newString .= $string[$i]; 
 				} 
 			} else {
-				echo strtolower($string[$i]); 
+				$newString .= strtolower($string[$i]); 
 			}
 		}	
+		return $newString;
 	}
+
 
 	function addGradient($string) {
 		$colorRandom = rand(0,360);  
-	
+		$newString = '';
 		for ($i = 0; $i < strlen($string); $i++) {
 			$color = $colorRandom + $i*20; 
-			echo  "<span style='color: hsl($color, 100%, 50%);'>" . $string[$i] . "</span>"; 
+			$newString .=  "<span style='color: hsl($color, 100%, 50%);'>" . $string[$i] . "</span>"; 
 		}
+		return $newString;
 	}
+
+
+	$revName = strrev($nickname);
+	$upperName = strtoupper($revName);
+	$lowerName = strtolower($upperName); 
+	$normalName = strrev($lowerName);
+	$dashName = "--" . $normalName . "--";
+	$xName = "x" . $dashName;
+	$shuffleName = str_shuffle($xName);
+	$randomName = randomstring() . $shuffleName;
+	$bracketsName = "[" . randomstring(). "]" . $shuffleName;
+	$randomUpName = randomUppercase($bracketsName);
+	$gradientName = addGradient($randomUpName); 
 
 	echo $nickname;
 	echo '<br>'; 
-	echo strrev($nickname);
+	echo $revName;
 	echo '<br>'; 
-	echo strtoupper($nickname); 
+	echo $upperName; 
 	echo '<br>'; 
-	echo $nickname; 
+	echo $lowerName;
 	echo '<br>';
-	echo "--" . $nickname . "--"; 
+	echo $normalName; 
 	echo '<br>';
-	echo "x" . $nickname;
+	echo $dashName; 
 	echo '<br>';
-	echo str_shuffle($nickname); 
+	echo $xName;
 	echo '<br>';
-	echo randomstring() . $nickname; 
+	echo $shuffleName; 
 	echo '<br>';
-	echo "[" . randomstring(). "]" . $nickname; 
+	echo $randomName; 
 	echo '<br>';
-	echo randomUppercase($nickname); 
+	echo $bracketsName; 
 	echo '<br>';
-	echo addGradient($nickname); 
+	echo $randomUpName; 
+	echo '<br>';
+	echo $gradientName; 
 	echo '<br>';
 	echo "<br><a href='nickname.php'>Back</a>";
-	 ?>
-</body>
-</html>
+
+
+
+	$names = [
+		$revName,
+		$upperName,
+		$lowerName,
+		$normalName,
+		$dashName,
+		$xName,
+		$shuffleName,
+		$randomName,
+		$bracketsName,
+		$randomUpName,
+		$gradientName
+	];
+
+	$_SESSION['names'] = $names; 
+
+	var_dump($_SESSION['names']);
+?>
