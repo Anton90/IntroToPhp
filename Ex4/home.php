@@ -97,11 +97,11 @@ setcookie("cookieCar");
 	echo "</pre>";
 	echo "<br>"; 
 	
-	$_COOKIE["cookieCar"] = serialize($carsSpec); 
-	//$_SESSION['sessionCar']= serialize($carsSpec);
+	//$_COOKIE["cookieCar"] = serialize($carsSpec); 
+	$_SESSION['sessionCar']= json_encode($carsSpec);
 
-	echo $_COOKIE["cookieCar"]; 
-	//echo $_SESSION['sessionCar'];
+	//echo $_COOKIE["cookieCar"]; 
+	echo $_SESSION['sessionCar'];
 
 	
 

@@ -85,10 +85,35 @@ function randomString($length = 4) {
 	}
 
 	function object_generate() {
-		echo $_SESSION["sessionCar"];
+		global $object; 
+		$object = json_decode($_SESSION["sessionCar"]);
+		echo "<pre>"; 
+		print_r($object) ; 
+		echo "</pre>";
+		 
 	}
 
-	function object_revert() {
+	function object_revertParam($obj) {
+		
+		$objArray = (array)$obj;
+
+		$carsArray = array_merge($objArray['arr1'], $objArray['arr2']);
+		unset($objArray['arr1']);
+		unset($objArray['arr2']); 
+
+		$carsAsArray = array_splice($objArray, 3, 5); 
+
+		$objNoArray = (object)$objArray;
+
+		echo "<pre>";
+		print_r($carsArray);
+		print_r($carsAsArray);
+		print_r($objNoArray);
+		echo "</pre>";  
 	}
 
+	function object_revertNoParam() {
+		$revert = json_decode($_SESSION["sessionCar"]);
+ 		object_revertParam($revert); 		
+	}
  ?>
