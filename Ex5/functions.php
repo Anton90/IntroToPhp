@@ -53,20 +53,7 @@ function randomString($length = 4) {
 	$bracketsName = "[" . randomstring(). "]" . $shuffleName;
 	$randomUpName = randomUppercase($bracketsName);
 	$gradientName = addGradient($randomUpName); 
-	
-		$names = [
-		$revName,
-		$upperName,
-		$lowerName,
-		$normalName,
-		$dashName,
-		$xName,
-		$shuffleName,
-		$randomName,
-		$bracketsName,
-		$randomUpName,
-		$gradientName
-	];
+
 
 	function nickname_generate($nickname) { 
 		$revName = strrev($nickname);
@@ -81,7 +68,7 @@ function randomString($length = 4) {
 		$randomUpName = randomUppercase($bracketsName);
 		$gradientName = addGradient($randomUpName); 
 		
-		echo $gradientName; 
+		return $gradientName; 
 	}
 
 	function object_generate() {

@@ -2,7 +2,9 @@
 session_start();
 include("functions.php");
 require("security.php");
+ 
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +13,22 @@ require("security.php");
 	<link rel="stylesheet" href="../bootstrap.css">
 </head>
 <body>
-	<div class="container  
-		<?php 
-			if (!$_POST['No']) {
-				echo "d-none"; 
-			} else {
-				echo "";
-			}
-		?>
-		">
+ <?php 
+ 	if($_POST["Yes"]) {
+ 		echo "<h2>" . nickname_generate("awesomeNickname") . "</h2>"; 
+ 	} else if ($_POST["No"]) {
+ 		showHome();
+ 	} else if (isset($_POST["generate"]) || isset($_POST["revert"]) || isset($_POST["nickname"])) {
+ 		showHome(); 
+ 		 
+ 	} else {
+ 		securityPage(); 
+ 	}
+
+function showHome() {
+
+	print <<< HOME1
+	<div class="container ">
 		<div class="row m-5">
 			<div class="col-3 border d-flex justify-content-center p-3 ">
 				<form method="POST">
@@ -41,42 +50,38 @@ require("security.php");
 				
 			</div>
 		</div>
-
+		
 		<div>
-		<?php 
-
-		if (isset($_POST["submit"])) {
-			$str = $_POST['nickname'];
-			nickname_generate($str); 
-		}
-
-		if (isset($_POST["generate"])) {
-			object_generate();
-			$_SESSION['objGenerate'] = $object; 
-			 
-		}
-
-		if (isset($_POST["revert"])) {
-			if ($_SESSION['objGenerate']) { 
-				$revertObj = $_SESSION['objGenerate'];
-				object_revertParam($revertObj);
-			} else {
-				object_revertNoParam(); 
-			}
+HOME1;
 			
-		}
+				if (isset($_POST["nickname"])) {
+					$str1 = $_POST['nickname'];
+					echo nickname_generate($str1); 
+				}
 
-		 ?>
+				if (isset($_POST["generate"])) {
+					object_generate();
+					$_SESSION['objGenerate'] = $object; 
+					 
+				}
+
+				if (isset($_POST["revert"])) {
+					if ($_SESSION['objGenerate']) { 
+						$revertObj = $_SESSION['objGenerate'];
+						object_revertParam($revertObj);
+					} else {
+						object_revertNoParam(); 
+					}
+					
+				}
+		 	
+print <<< HOME2
 		 </div>
-
 	</div>
+
+
 </body>
 </html>
-
-<!-- 			 <?php 
-			if (!$_POST['No']) {
-				echo "d-none"; 
-			} else {
-				echo "";
-			}
-			?>" -->
+HOME2;
+};
+?>
