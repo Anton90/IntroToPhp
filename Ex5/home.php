@@ -6,8 +6,8 @@ require("security.php");
  ?>
 
 <!DOCTYPE html>
-<html lang="en">home
-<head>home
+<html lang="en">
+<head>
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="../bootstrap.css">
@@ -22,10 +22,10 @@ require("security.php");
  		securityPage(); 
  	}
 
-function showHome() {home
+function showHome() {
 
 	print <<< home1
-	<div class="container ">home
+	<div class="container ">
 		<div class="row m-5">
 			<div class="col-3 border d-flex justify-content-center p-3 ">
 				<form method="POST">

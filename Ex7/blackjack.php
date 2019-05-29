@@ -12,13 +12,13 @@ class Blackjack {
 		}
 	}
 
+
 	public function Hit() {
 	 	$rand = rand(1,11);
 		$this->score += $rand;
-		$_SESSION['score'] = $this->score; 
-
-		
+		$_SESSION['score'] = $this->score; 	
 	}
+
 
 	public function Stand() {
 		echo "Your score is: " . $this->score;
@@ -41,6 +41,7 @@ class Blackjack {
 		} 
 	}
 
+
 	public function Surrender() {
 		unset($_SESSION['score']); 
 		echo "Dealer wins!<br>Loser!";
@@ -51,4 +52,5 @@ class Blackjack {
 		echo "<br>The dealer has: " . $this->score;
 	}
 }
+
 ?>
